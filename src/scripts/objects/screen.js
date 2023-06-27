@@ -12,8 +12,7 @@ const screen = {
         </div>`
 
         let repositoriesItems = ''
-        user.repositories.forEach(repo => repositoriesItems += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> <div class="status">🍴 ${repo.forks} / ⭐ ${repo.stargazers_count} / 👀 ${repo.watchers} / 👨‍💻 ${repo.language}</div></li>`);
-
+        user.repositories.forEach(repo => repositoriesItems += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> <ul class="status"><li>🍴 ${repo.forks}</li> <li>⭐ ${repo.stargazers_count}</li> <li>👀 ${repo.watchers}</li> <li>👨‍💻 ${repo.language}</li></ul></li>`);
         
         if(user.repositories.length > 0){
             this.userProfile.innerHTML += `<div class="repositories section">
@@ -21,10 +20,15 @@ const screen = {
             <ul>${repositoriesItems}</ul>
             </div>`
         }
-        
-        // let eventsItem = ''
-        // user.events.forEach((e, i) => eventsItem += `<li>${e[i].type}</li>`);
-        
+
+        let eventsItems = ''
+        user.events.forEach( e => {
+            eventsItems += `<li>${e.type}</li>`
+        })
+
+        if(user.events.length > 0) {
+            this.userProfile.innerHTML += `<ul>${eventsItems}</ul>`
+        }
     },
     renderNotFound(){
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
