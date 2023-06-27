@@ -12,7 +12,7 @@ const screen = {
         </div>`
 
         let repositoriesItems = ''
-        user.repositories.forEach(repo => repositoriesItems += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> <div>Forks: 🍴 ${repo.forks} Stars: ⭐ ${repo.stargazers_count} Watchers: 👀 ${repo.watchers} Language: 👨‍💻 ${repo.language}</div></li>`);
+        user.repositories.forEach(repo => repositoriesItems += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> <div class="status">🍴 ${repo.forks} ⭐ ${repo.stargazers_count} 👀 ${repo.watchers} 👨‍💻 ${repo.language}</div></li>`);
 
         
         if(user.repositories.length > 0){
@@ -22,9 +22,8 @@ const screen = {
             </div>`
         }
         
-        // let userEvents = ''
-        // user.events.forEach(e => userEvents += `<li>${e.events}</li>`);
         // let eventsItem = ''
+        // user.events.forEach((e, i) => eventsItem += `<li>${e[i].type}</li>`);
         
     },
     renderNotFound(){
@@ -35,3 +34,8 @@ const screen = {
 export {screen}
 
 // repositories: [forks: '', stargazers_count: '', watchers: '', language: ''],
+// <div>Forks: 🍴 ${repo.forks} Stars: ⭐ ${repo.stargazers_count} Watchers: 👀 ${repo.watchers} Language: 👨‍💻 ${repo.language}</div>
+
+//  type
+//  PushEvent
+//  CreateEvent
