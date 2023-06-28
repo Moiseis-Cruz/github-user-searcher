@@ -23,11 +23,12 @@ const screen = {
 
         let eventsItems = ''
         user.events.forEach( e => {
-            eventsItems += `<li>${e.type}</li>`
+            eventsItems += `<li class="events"><span>${e.repo.name}:</span> ${e.type}</li>`
         })
 
         if(user.events.length > 0) {
-            this.userProfile.innerHTML += `<ul>${eventsItems}</ul>`
+            this.userProfile.innerHTML += `<h2>Eventos:</h2>
+            <ul class="list-events">${eventsItems}</ul>`
         }
     },
     renderNotFound(){
