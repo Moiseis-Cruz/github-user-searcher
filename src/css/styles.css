@@ -89,7 +89,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;  
+  padding: 40px;
 }
 
 .container .profile-data .info {
@@ -157,6 +157,18 @@ main {
   border-radius: 7px;
   /* display: flex;
   flex-direction: column; */
+}
+
+.list-events {
+  background-color: rgb(188, 188, 188);
+}
+
+.list-events .events {
+  margin-top: 15px;
+}
+
+.list-events .events span {
+  font-weight: 700;
 }
 
 .container .profile-data.hide{
