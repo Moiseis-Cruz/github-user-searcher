@@ -37,10 +37,3 @@ const screen = {
 }
 
 export {screen}
-
-// repositories: [forks: '', stargazers_count: '', watchers: '', language: ''],
-// <div>Forks: 🍴 ${repo.forks} Stars: ⭐ ${repo.stargazers_count} Watchers: 👀 ${repo.watchers} Language: 👨‍💻 ${repo.language}</div>
-
-//  type
-//  PushEvent
-//  CreateEvent

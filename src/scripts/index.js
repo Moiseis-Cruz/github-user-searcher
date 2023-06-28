@@ -2,10 +2,6 @@ import { getUser } from "./services/user.js"
 import { getRepositories } from "./services/repositories.js"
 import { getEvents } from "./services/events.js"
 
-// console.log(await getUser('devemdobro'));
-// console.log(await getRepositories('devemdobro'));
-// console.log(await getEvents('devemdobro'));
-
 import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
 
@@ -45,7 +41,6 @@ async function getUserData(userName) {
     const repositoriesResponse = await getRepositories(userName)
 
     const eventsResponse = await getEvents(userName)
-    // console.log(eventsResponse);
 
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
