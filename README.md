@@ -6,7 +6,7 @@ Nele, ao digitar um nome de usuário válido no campo de busca, o projeto me mos
 
 No Javascript procurei como usar a lógica de programação para fazer com que os elementos desejados aparecessem na tela usando os métodos das APIs.
 
-Com as APIs busquei trabalhar com os métodos de cada endpoint desejado.
+Com as APIs busquei trabalhar com os métodos de cada endpoint solicitado.
 
 ## Meus desafios:
 
@@ -16,7 +16,7 @@ Minhas principais dificuldades foram em colocar cada método correspondente a ca
 - HTML;
 - CSS;
 - Javascript;
-- API;
+- API's;
 
 <br><br>
 
