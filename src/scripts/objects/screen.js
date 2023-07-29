@@ -14,9 +14,9 @@ const screen = {
         let repositoriesItems = ''
         user.repositories.forEach(repo => repositoriesItems += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a>
                                                                     <ul class="status">
-                                                                        <li>🍴 ${repo.forks}</li>
+                                                                        <li>🍴 ${repo.forks ?? 'Sem forks'}</li>
                                                                         <li>⭐ ${repo.stargazers_count}</li>
-                                                                        <li>👀 ${repo.watchers}</li> <li>👨‍💻 ${repo.language}</li>
+                                                                        <li>👀 ${repo.watchers}</li> <li>👨‍💻 ${repo.language ?? 'sem linguagem'}</li>
                                                                     </ul>
                                                                 </li>`);
         
