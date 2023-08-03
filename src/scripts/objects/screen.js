@@ -28,13 +28,19 @@ const screen = {
         }
 
         let eventsItems = ''
-        user.events.forEach( e => {
-            eventsItems += `<li class="events"><span>${e.repo.name}:</span> ${e.type}</li>`
+        user.events.forEach( evento => {
+            if(evento.payload.commits){
+                console.log(evento);
+                eventsItems += `<li class="events"><span>${evento.repo.name}</span> - ${evento.payload.commits[0].message}</li>`
+            }else{
+                eventsItems += `<li class="events"><span>${evento.repo.name}</span> : Sem commits</li>`
+            }
+            // eventsItems += `<li class="events"><span>${evento.repo.name}:</span> ${evento.payload.commits[0].message}</li>`
         })
 
         if(user.events.length > 0) {
             this.userProfile.innerHTML += ` <h2>Eventos:</h2>
-                                            <ul class="list-events">${eventsItems}</ul>`
+                                            <ul class="list-events">${eventsItems && 'Esse usuário não têm eventos'}</ul>`
         }
     },
     renderNotFound(){
