@@ -40,7 +40,7 @@ const screen = {
 
         if(user.events.length > 0) {
             this.userProfile.innerHTML += ` <h2>Eventos:</h2>
-                                            <ul class="list-events">${eventsItems && 'Esse usuário não têm eventos'}</ul>`
+                                            <ul class="list-events">${eventsItems || 'Esse usuário não têm eventos'}</ul>`
         }
     },
     renderNotFound(){
