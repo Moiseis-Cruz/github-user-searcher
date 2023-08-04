@@ -6,9 +6,4 @@ async function getEvents(userName) {
     return events.filter(elements => {return elements.type === 'PushEvent' || elements.type === 'CreateEvent'}).slice(0, quantity)
 }
 
-// async function getEvents(userName) {
-//     const response = await fetch(`${baseUrl}/${userName}/events?per_page=${quantity}`)
-//     return await response.json()
-// }
-
 export {getEvents}

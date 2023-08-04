@@ -35,7 +35,6 @@ const screen = {
             }else{
                 eventsItems += `<li class="events"><span>${evento.repo.name}</span> : Sem commits</li>`
             }
-            // eventsItems += `<li class="events"><span>${evento.repo.name}:</span> ${evento.payload.commits[0].message}</li>`
         })
 
         if(user.events.length > 0) {
