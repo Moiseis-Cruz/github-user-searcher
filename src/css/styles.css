@@ -160,6 +160,7 @@ main {
 .list-events {
   background-color: rgb(188, 188, 188);
   padding: 10px;
+  color: #000;
 }
 
 .list-events .events {
