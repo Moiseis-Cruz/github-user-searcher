@@ -30,7 +30,6 @@ const screen = {
         let eventsItems = ''
         user.events.forEach( evento => {
             if(evento.payload.commits){
-                console.log(evento);
                 eventsItems += `<li class="events"><span>${evento.repo.name}</span> - ${evento.payload.commits[0].message}</li>`
             }else{
                 eventsItems += `<li class="events"><span>${evento.repo.name}</span> : Sem commits</li>`
